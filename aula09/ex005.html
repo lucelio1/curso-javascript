@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos Com DOM</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color: darkcyan;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo usar o <strong>DOM</strong> em Javascrip</p>
+    <div id="msg">
+        Clique Aqui
+    </div>
+
+    <script>
+        /*
+        document.write('Olá, Mundo !<br>')
+        document.write(document.charset + '<br>')
+        document.write(window.navigator.appName + '<br>')
+        document.write(document.URL)
+        */
+
+        /*
+        var p = document.getElementsByTagName('p')[0]
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write('Esta escrito assim: '+ p.innerText+'<br>')
+        document.write(p1.innerHTML)
+        p.style.color = 'red'
+        p1.style.backgroundColor = 'gray'
+        */
+
+        /*
+        var d = document.getElementById('msg')
+        d.style.backgroundColor = 'darkblue'
+        d.innerText = 'Estou manipulando div por javascript'
+        */
+
+        /*
+        var d = document.getElementsByName('msg')[0]
+        d.innerText = 'Manipulando div usando getElementsByName'
+        */
+
+        /*
+        var d = document.getElementsByClassName('msg')[0]
+        d.style.color = 'red'
+        */
+
+        var d = document.querySelector('div#msg')
+        d.style.background = 'green'
+
+    </script>
+</body>
+</html>

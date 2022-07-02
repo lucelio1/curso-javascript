@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+     body{
+            background-color:gray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.7em;
+        }
+        h1{
+            color:white;
+        }
+
+        input{
+            height: 20px;
+            border-radius: 7px;
+            border:none;
+        }
+        div#res{
+            background-color: lightgray;
+            width: 400px;
+            padding: 3px;
+            margin: 7px;
+
+        }
+        p{
+            margin: 1px;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificando Cidadania</h1>
+    País De Origem <input type="text" name="cid" id="cid">
+    <input type="button" value="Verificando" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(){
+            var cidv = document.getElementById('cid')
+            var res = document.getElementById('res')
+            var ver = (cidv.value)
+            res.innerHTML = `<p>Seu país de origem é <strong>${ver}</strong></p>`
+            if (ver != 'Brasil'){
+                res.innerHTML += '<p>Você é <strong>Estrangeiro</strong></p>'
+            }else{
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
